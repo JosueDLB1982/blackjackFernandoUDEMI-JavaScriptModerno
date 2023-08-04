@@ -89,7 +89,7 @@ const determineWinner = () => {
         } else if(pointsComputer > 21) {
             alert('Genial, has ganado')
         }
-    }, 30);
+    }, 100);
 }
 
 /* turno de la computadora */
@@ -100,10 +100,6 @@ const turnComputer = (minimunPoints) => {
         pointsComputer = pointsAccumulator(card, pointsPlayers.length - 1) // puesto que es el turno de la computadora, su posición en el array es el último
         createCard(card, pointsPlayers.length - 1)
         
-        /* const imgCard = document.createElement('img')
-        imgCard.src = `assets/cartas/${card}.png`
-        imgCard.classList.add('carta')
-        showCardsComputer.append(imgCard) */
         if(minimunPoints > 21) {
             stop.disabled = true
             break
